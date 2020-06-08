@@ -15,4 +15,4 @@ Click on the article you would like to read for :
 - In Mamp page, click on ```My Website``` to open the blog
 - Don't forget to click on ```Stop Server``` when leaving
 
-Content taken from : <a href="https://www.vojomag.com/" alt="PokeAPI">Vojo Magazine</a>
+Content taken from : <a href="https://www.vojomag.com/" alt="Vojo Magazine">Vojo Magazine</a>
