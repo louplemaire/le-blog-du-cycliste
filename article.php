@@ -40,7 +40,7 @@
                 VALUES
                     (:id_article, :text)
             ');
-            $prepare->bindValue(':id_article',$id_article,PDO::PARAM_INT);
+            $prepare->bindValue(':id_article', $_GET['id_article'], PDO::PARAM_INT);
             $prepare->bindValue(':text', $text);
             $result = $prepare->execute();
 
