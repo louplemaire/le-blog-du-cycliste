@@ -2,15 +2,16 @@
     // Includes
     include './includes/config.php';
 
-    // Id
-    $id_article = (int)$_GET['id_article'];
-
     // Select article
-    $query = $pdo->query('SELECT id, title, text, date, image FROM articles WHERE id = '.$id_article);
+    $query = $pdo->prepare('SELECT id, title, text, date, image FROM articles WHERE id = :id_article');
+    $query->bindValue(':id_article', $_GET['id_article'], PDO::PARAM_INT);
+    $query->execute();
     $article = $query->fetchAll();
 
     // Select comments
-    $query = $pdo->query('SELECT id, id_article, text FROM comments WHERE id_article = '.$id_article);
+    $query = $pdo->prepare('SELECT id, id_article, text FROM comments WHERE id_article = :id_article');
+    $query->bindValue(':id_article', $_GET['id_article'], PDO::PARAM_INT);
+    $query->execute();
     $comments = $query->fetchAll();
 
     // Messages
