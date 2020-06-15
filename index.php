@@ -1,5 +1,5 @@
 <?php
-    // Includes
+    // Config
     include './includes/config.php';
 
     // Select articles
